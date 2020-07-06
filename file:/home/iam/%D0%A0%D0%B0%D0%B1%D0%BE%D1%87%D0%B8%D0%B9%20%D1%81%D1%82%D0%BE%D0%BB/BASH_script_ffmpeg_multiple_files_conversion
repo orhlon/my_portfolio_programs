@@ -1,0 +1,4 @@
+ls > ls.txt
+for ((i=1; i<4; i++))
+    do ffmpeg -i $(head -$i ls.txt | tail -1) -vf "scale=iw* .1:ih* .1" /home/iam/Desktop/out/$(head -$i ls.txt | tail -1).MP4
+done
